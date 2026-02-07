@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Will You Be Mine?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* styles.css */
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* Optional: Styles for a preloader */
+        #preloader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 2em;
+        }
+
+        .loader {
+            color: #000000;
+            font-size: 45px;
+            text-indent: -9999em;
+            overflow: hidden;
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            position: relative;
+            transform: translateZ(0);
+            animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
+        }
+
+        @keyframes mltShdSpin {
+            0% {
+                box-shadow: 0 -0.83em 0 -0.4em,
+                    0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+                    0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+
+            5%,
+            95% {
+                box-shadow: 0 -0.83em 0 -0.4em,
+                    0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+                    0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+
+            10%,
+            59% {
+                box-shadow: 0 -0.83em 0 -0.4em,
+                    -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em,
+                    -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+            }
+
+            20% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+                    -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em,
+                    -0.749em -0.34em 0 -0.477em;
+            }
+
+            38% {
+                box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+                    -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em,
+                    -0.82em -0.09em 0 -0.477em;
+            }
+
+            100% {
+                box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em,
+                    0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+            }
+        }
+
+        @keyframes round {
+            0% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body id="gitesh">
+    <div id="preloader">
+        <span class="loader"></span>
+    </div>
+    <div id="page-container" class="hidden">
+
+        <!-- Modal YES -->
+        <div class="modal fade" id="staticBackdropYES" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="border-bottom: none !important;">
+                        <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1> -->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="imgYES.jpg" alt="Photo NO" class="imgNo card-img-top">
+                        <h3 style="color: #fff;">YES I KNEW IT❤️❤️ </h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal NO -->
+        <div class="modal fade" id="staticBackdropNO" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title NO</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div> -->
+                    <div class="modal-body">
+                        <img src="imgNO.jpg" alt="Photo NO" class="imgNo card-img-top">
+                        <h3 style="color: #fff;">Are you sure?</h3>
+                    </div>
+                    <div class="modal-footer" style="justify-content: space-evenly;">
+                        <button type="button" id="seeThisTrigger" class="btn btn-secondary yes"
+                            data-bs-dismiss="modal">YES</button>
+                        <button type="button" class="btn btn-primary no " data-bs-dismiss="modal"
+                            aria-label="Close">NO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cont-home">
+
+            <div class="default" id="default">
+                <img src="img1.jpg" class="emoji-box" alt="Photo">
+                <h1 class="bigText">Will you be my valentine 🥺?</h1>
+                <p class="smallText">
+                    Life is an incredible journey, and I want to spend every single
+                    second of it with you.
+                </p>
+                <div class="buttons">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary yes" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdropYES">
+                        YES
+                    </button>
+                    <button type="button" class="btn btn-primary no" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdropNO">
+                        NO
+                    </button>
+                </div>
+            </div>
+
+            <div class="seeThis" id="seeThis" style="display: flex;flex-direction: column;align-items: center;">
+                <!-- <h1 class="bigText"> See This</h1> -->
+                <img src="catWithGun.gif" alt="Cat With Gun img" style="padding: 20px; margin: 10px;">
+                <button class="seeThis" id="finalTrigger">Click Here</button>
+            </div>
+
+
+            <div class="final" id="final">
+                <img src="bubu-dudu.gif" class="bubu-dudu" alt="bubu dudu" srcset="">
+                <h1 class="bigText">Happy Valentine Day Baby!</h1>
+                <h1 class="bigText">❤️💍🌹</h1>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // script.js
+
+        // Function to hide the preloader and show the page content
+        function showPage() {
+            document.getElementById('preloader').classList.add('hidden');
+            document.getElementById('page-container').classList.remove('hidden');
+        }
+
+        // The window.onload event fires only after the DOM is ready
+        // AND all dependent resources (images, videos, etc.) have fully loaded.
+        window.onload = function () {
+            console.log("All assets (images, videos, CSS, etc.) are fully loaded!");
+            showPage();
+        };
+
+    </script>
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+        }
+
+        #page-container {
+            height: 100vh;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("img.jpg");
+            background-size: cover;
+            /* Scales the image to cover the entire element */
+            background-repeat: no-repeat;
+            /* Prevents the image from repeating */
+            background-position: center;
+            /* Centers the image within the body */
+            background-attachment: fixed;
+            /* Ensures the image stays fixed if the content scrolls */
+        }
+
+        .modal {
+            /* For Internet Explorer, Edge */
+            -ms-overflow-style: none;
+            /* For Firefox */
+            scrollbar-width: none;
+        }
+
+        .modal::-webkit-scrollbar {
+            /* For Chrome, Safari, and Opera */
+            display: none !important;
+        }
+
+        .cont-home {
+            background-color: #f7c5cf;
+            width: 90%;
+            max-width: 600px;
+            padding: 40px 20px;
+            border-radius: 20px;
+            text-align: center;
+            /* From https://css.glass */
+            /* From https://css.glass */
+            background: rgba(255, 0, 178, 0.34);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 0, 178, 1);
+        }
+
+        .emoji-box {
+            width: 12rem;
+            height: 16rem;
+            background-color: #fbd7df;
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+        }
+
+        .bigText {
+            color: #ffff;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .smallText {
+            color: #ffffffdb;
+            font-size: 16px;
+            margin-bottom: 30px;
+            max-width: 420px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .yes {
+            background-color: #2db82a !important;
+            color: #fff !important;
+            border-radius: 20px !important;
+        }
+
+        .no {
+            background-color: #e53935 !important;
+            color: #fff !important;
+            border-radius: 20px !important;
+        }
+
+        .yes,
+        .no {
+            font-weight: bold !important;
+            width: 6rem !important;
+
+        }
+
+        img.imgNo {
+            width: 100% !important;
+            height: 100% !important;
+            border-radius: 16px !important;
+        }
+
+        .modal-body {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-content {
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.34) !important;
+            border-radius: 16px !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+            backdrop-filter: blur(20px) !important;
+            -webkit-backdrop-filter: blur(20px) !important;
+            border: 1px solid rgba(255, 255, 255, 1) !important;
+        }
+
+        button.seeThis {
+            background-image: url("heart_bg.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 200px;
+            height: 100px;
+            border: none;
+            color: black;
+            /* padding: 15px 32px; */
+            cursor: pointer;
+            text-align: center;
+            font-size: 4vh;
+            border-radius: 64px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+
+        img.bubu-dudu {
+            width: 70%;
+            height: 100%;
+            object-fit: contain;
+            /* or cover */
+        }
